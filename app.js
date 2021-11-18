@@ -12,8 +12,8 @@ const trackUrl2 =
     );
 
 const APIController = (function () {
-    const clientId = "0d7012ae0619440296137343ac5c8bfd";
-    const clientSecret = "f4ccf3419f7b485d8eb04b857118f4cd";
+    const clientId = "clientId";
+    const clientSecret = "clientSecret";
     // List of the available genres for the recommendation endpoint
     const available_genres = [
         "acoustic",

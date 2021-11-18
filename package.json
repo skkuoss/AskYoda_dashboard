@@ -1,0 +1,19 @@
+{
+  "name": "askyoda_dashboard",
+  "version": "1.0.0",
+  "description": "Front-end website  for wrapping AskYoda",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skkuoss/AskYoda_dashboard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skkuoss/AskYoda_dashboard/issues"
+  },
+  "homepage": "https://github.com/skkuoss/AskYoda_dashboard#readme"
+}

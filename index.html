@@ -11,6 +11,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="first-page.css">
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,7 +25,7 @@
 </head>
 
 <body>
-    <header id="header" class="firstPage">
+    <header id="header">
         <!-- class="header" -->
         <!-- class="darkHeader"> -->
         <h1>Ask Yoda</h1>
@@ -32,23 +33,22 @@
     </header>
 
     <main id="main">
-        <div class="container" id="mainContainer">
-            <div class="innerContainer" id="inputsBox">
-                <div class="luke">
-                    <img id="lukeSkywalker" src="./images/luke.png" alt="Luke Skywalker">
-                    <div class="speech">
-                        <div class="bubble" id="lukeBubble">I like these two songs:</div>
+        <div class="innerContainer" id="inputsBox">
+            <div class="lukeContainer" id="lukeContainer">
+                <img class="lukeSkywalker" id="lukeSkywalker" src="./images/luke.png" alt="Luke Skywalker">
+                <div class="speech" id="speech">
+                    <div class="bubble" id="lukeBubble">I like these two songs:</div>
+                    <div class="inputs">
                         <input type="text" class="inputLine" id="song1" placeholder="First song">
                         <input type="text" class="inputLine" id="song2" placeholder="Second song">
-                        <button id="lukeSongs">Submit</button>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="innerContainer" id="buttonsBox">
-                <img id="yodaIcon" src="./images/yodaIcon.png" alt="Icon of Yoda">
-                <button id="askYodaBtn">Ask Yoda</button>
-            </div>
+        <div class="innerContainer" id="buttonsBox">
+            <img id="yodaIcon" src="./images/yodaIcon.png" alt="Icon of Yoda">
+            <button id="askYodaBtn">Ask Yoda</button>
         </div>
 
         <div class="container" id="resultsContainer">

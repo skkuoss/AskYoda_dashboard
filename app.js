@@ -4,34 +4,6 @@ document.getElementById("footer").style.display = "none";
 
 let song1, song2, data;
 
-/* document.getElementById("reset").onclick =  () => {
-    document.getElementById("song1").value = "";
-    document.getElementById("song2").value = "";
-}
- */
-/* document.getElementById("askYodaBtn").onclick = async () => {
-    song1 = document.getElementById("song1").value;
-    song2 = document.getElementById("song2").value;
-
-    if (song1 === "" || song2 === "") {
-        console.log("Oh nooo!");
-        return;
-    }
-    
-    document.getElementById("song1").style.display = "none";
-    document.getElementById("song2").style.display = "none";
-    document.getElementById("submit").style.display = "none";
-    document.getElementById("reset").style.display = "none";
-
-    document.getElementById("lukeBubble").innerHTML = `I like ${song1} and ${song2}.`; /* `I like ${song1} and ${song2}` */
-
-/* let response = await fetch(
-    `http://localhost:3100/v1/recommendations?songs=${song1}&songs=${song2}`
-);
-data = await response.json();
-};
-*/
-
 const loadMusic = async () => {
     song1 = document.getElementById("song1").value;
     song2 = document.getElementById("song2").value;
@@ -39,16 +11,21 @@ const loadMusic = async () => {
         return;
 
     let response = await fetch(
-            `http://localhost:3100/v1/recommendations?songs=${song1}&songs=${song2}`
-        );
+        `http://localhost:3100/v1/recommendations?songs=${song1}&songs=${song2}`
+    );
     data = await response.json();
 };
 
-// document.getElementById("askYodaBtn").addEventListener("mouseover", loadMusic);
-
+function removeAllChildNodes(parent) { 
+    while (parent.firstChild) { 
+        parent.removeChild(parent.firstChild); 
+    } 
+}
 
 document.getElementById("askYodaBtn").onclick = async () => {
-    document.getElementById("resultsContainer").innerHTML = "";
+    removeAllChildNodes(resultsLeft);
+    removeAllChildNodes(resultsRight);
+    document.getElementById("footer").style.display = "none";
 
     song1 = document.getElementById("song1").value;
     song2 = document.getElementById("song2").value;
@@ -75,8 +52,10 @@ document.getElementById("askYodaBtn").onclick = async () => {
 
     // console.log(data.tracks);
 
+    let counter = 0;
     data.tracks.forEach(tableRow => {
         console.log(tableRow.album.images[0]);
+        counter++;
 
         /* <div class="card">
             <img src="./images/yodaIcon.png" alt="">
@@ -98,8 +77,9 @@ document.getElementById("askYodaBtn").onclick = async () => {
                 </div>
             </div>
             `;
-
-        document.getElementById("resultsContainer").appendChild(c);
+        if (counter <= 5) document.getElementById("resultsLeft").appendChild(c);
+        else if (counter <= 10) document.getElementById("resultsRight").appendChild(c);
+        else return;
     });
 };
 

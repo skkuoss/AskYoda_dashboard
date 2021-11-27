@@ -15,16 +15,6 @@ body {
 }
 
 /* ////// RESULTS ////// */
-#resultsContainer {
-    background-color: black;
-    cursor: text;
-    user-select: text;
-    /* height: 88vh; */
-
-    /* only temporary */
-    /* border: 1px solid black; */
-    /* background-color: lightskyblue; */
-}
 
 table {
     width: 70%;

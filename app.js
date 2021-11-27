@@ -92,8 +92,10 @@ document.getElementById("askYodaBtn").onclick = async () => {
         c.innerHTML = `
             <img src="${tableRow.album.images[0].url}" alt="task image">
             <div class="text">
-                <h1>${tableRow.name}</h1>
-                <h3>${tableRow.artists[0].name}<h3>
+                <div class="text">
+                    <h1>${tableRow.name}</h1>
+                    <h3>${tableRow.artists[0].name}<h3>
+                </div>
             </div>
             `;
 

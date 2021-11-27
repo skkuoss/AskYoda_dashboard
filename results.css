@@ -38,6 +38,7 @@
 }
 
 .card img {
+    border-radius: 15%;
     width: auto;
     height: 70%;
 }
@@ -51,7 +52,7 @@
     text-align: left;
 }
 
-.card h3{
+.card h3 {
     font-weight: normal;
 }
 

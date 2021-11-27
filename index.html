@@ -1,76 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <title>Ask Yoda</title>
+        <link rel="icon" href="./images/yodaIcon.png" />
 
-<head>
-    <title>Ask Yoda</title>
-    <link rel="icon" href="./images/yodaIcon.png">
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        />
+        <!-- CSS -->
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="first-page.css" />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="first-page.css">
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poller+One&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap"
+            rel="stylesheet"
+        />
 
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poller+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+        <!-- Java Script -->
+        <script type="text/javascript" src="app.js" async></script>
+    </head>
 
-    <!-- Java Script -->
-    <script type="text/javascript" src="app.js" async></script>
+    <body>
+        <header id="header">
+            <!-- class="header" -->
+            <!-- class="darkHeader"> -->
+            <h1>Ask Yoda</h1>
+            <h2>What music should I listen to?</h2>
+        </header>
 
-</head>
-
-<body>
-    <header id="header">
-        <!-- class="header" -->
-        <!-- class="darkHeader"> -->
-        <h1>Ask Yoda</h1>
-        <h2>What music should I listen to?</h2>
-    </header>
-
-    <main id="main">
-        <div class="innerContainer" id="inputsBox">
-            <div class="lukeContainer" id="lukeContainer">
-                <img class="lukeSkywalker" id="lukeSkywalker" src="./images/luke.png" alt="Luke Skywalker">
-                <div class="speech" id="speech">
-                    <div class="bubble" id="lukeBubble">I like these two songs:</div>
-                    <div class="inputs">
-                        <input type="text" class="inputLine" id="song1" placeholder="First song">
-                        <input type="text" class="inputLine" id="song2" placeholder="Second song">
+        <main id="main">
+            <div class="innerContainer" id="inputsBox">
+                <div class="lukeContainer" id="lukeContainer">
+                    <img
+                        class="lukeSkywalker"
+                        id="lukeSkywalker"
+                        src="./images/luke.png"
+                        alt="Luke Skywalker"
+                    />
+                    <div class="speech" id="speech">
+                        <div class="bubble" id="lukeBubble">
+                            I like these two songs:
+                        </div>
+                        <div class="inputs">
+                            <input
+                                type="text"
+                                class="inputLine"
+                                id="song1"
+                                placeholder="First song"
+                            />
+                            <input
+                                type="text"
+                                class="inputLine"
+                                id="song2"
+                                placeholder="Second song"
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="innerContainer" id="buttonsBox">
-            <img id="yodaIcon" src="./images/yodaIcon.png" alt="Icon of Yoda">
-            <button id="askYodaBtn">Ask Yoda</button>
-        </div>
+            <div class="innerContainer" id="buttonsBox">
+                <img
+                    id="yodaIcon"
+                    src="./images/yodaIcon.png"
+                    alt="Icon of Yoda"
+                />
+                <button id="askYodaBtn">Ask Yoda</button>
+            </div>
 
-        <div class="container" id="resultsContainer">
-            <table id="resultsTable">
-                <thead>
-                    <tr>
-                        <th id="artist">Artist</th>
-                        <th>Song name</th>
-                    </tr>
-                </thead>
-            </table>
-        </div>
-    </main>
+            <div class="container" id="resultsContainer">
+                <table id="resultsTable">
+                    <thead>
+                        <tr>
+                            <th id="artist">Artist</th>
+                            <th>Song name</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </main>
 
-    <footer id="footer">
-        <div>
-            <p>This project was done at Sungkyunkwan University for the Open Source Software Practice class in the Fall
-                semester of 2021. Visit the repository of this project
-                <a href="https://github.com/skkuoss">here<img src="./images/github-logo.png" alt="github-logo"></a>
-            </p>
-        </div>
-    </footer>
-</body>
-
+        <footer id="footer">
+            <div>
+                <p>
+                    This project was done at Sungkyunkwan University for the
+                    Open Source Software Practice class in the Fall semester of
+                    2021. Visit the repository of this project
+                    <a href="https://github.com/skkuoss"
+                        >here<img
+                            src="./images/github-logo.png"
+                            alt="github-logo"
+                    /></a>
+                </p>
+            </div>
+        </footer>
+        <!-- Bootstrap Bundle with Popper -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"
+        ></script>
+    </body>
 </html>

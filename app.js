@@ -4,23 +4,47 @@ document.getElementById("footer").style.display = "none";
 
 let song1, song2, data; 
 
-document.getElementById("lukeSongs").onclick = async () => {
+/* document.getElementById("reset").onclick =  () => {
+    document.getElementById("song1").value = "";
+    document.getElementById("song2").value = "";
+}
+ */
+/* document.getElementById("askYodaBtn").onclick = async () => {
     song1 = document.getElementById("song1").value;
     song2 = document.getElementById("song2").value;
-    
-    let response = await fetch(
-        `http://localhost:3100/v1/recommendations?songs=${song1}&songs=${song2}`
-    );
 
+    if (song1 === "" || song2 === "") {
+        console.log("Oh nooo!");
+        return;
+    }
+    
     document.getElementById("song1").style.display = "none";
     document.getElementById("song2").style.display = "none";
-    document.getElementById("lukeSongs").style.display = "none";
+    document.getElementById("submit").style.display = "none";
+    document.getElementById("reset").style.display = "none";
 
     document.getElementById("lukeBubble").innerHTML = `I like ${song1} and ${song2}.`; /* `I like ${song1} and ${song2}` */
+    
+    /* let response = await fetch(
+        `http://localhost:3100/v1/recommendations?songs=${song1}&songs=${song2}`
+    );
     data = await response.json();
 };
+ */
 
 document.getElementById("askYodaBtn").onclick = async () => {
+    song1 = document.getElementById("song1").value;
+    song2 = document.getElementById("song2").value;
+
+    if (song1 === "" || song2 === "") {
+        document.getElementById("lukeBubble").innerHTML = `Please fill both songs!`;
+        document.getElementById("lukeBubble").style.fontWeight = 'bold';
+        return;
+    }
+    
+    document.getElementById("lukeBubble").innerHTML = `I like ${song1} and ${song2}.`;
+    document.getElementById("lukeBubble").style.fontWeight = 'normal';
+
     // dark theme
     document.getElementById("header").classList.add("darkHeader");
     document.getElementById("mainContainer").style.display = "none";

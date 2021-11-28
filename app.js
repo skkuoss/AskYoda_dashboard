@@ -59,6 +59,7 @@ document.getElementById("song2").addEventListener("keyup", async (e) => {
         songList2.appendChild(songOption);
     }
 });
+
 function removeAllChildNodes(parent) {
     while (parent.firstChild) {
         parent.removeChild(parent.firstChild);
@@ -91,38 +92,29 @@ document.getElementById("askYodaBtn").onclick = async () => {
         "by"
     )} and ${song2.replace("-", "by")}.`;
     document.getElementById("lukeBubble").style.fontWeight = "normal";
-    // dark theme
-    // document.getElementById("header").classList.add("darkHeader");
-    // document.getElementById("mainContainer").style.display = "none";
-    // document.getElementById("resultsContainer").style.display = "block";
     document.getElementById("footer").style.display = "block";
 
-    // console.log(data.tracks);
+    //
+    console.log(data.tracks[0]);
+
 
     let counter = 0;
     data.tracks.forEach((tableRow) => {
-        console.log(tableRow.album.images[0]);
         counter++;
 
-        /* <div class="card">
-            <img src="./images/yodaIcon.png" alt="">
-            <div class="text">
-                <h1>Song name</h1>
-                <h3>artist</h3>
-            </div>
-        </div> */
-
+        // let c
         let c = document.createElement("div");
-        c.setAttribute("class", "card");
-        // c.setAttribute('id', item.id);
+        // c.setAttribute("class", "card");
         c.innerHTML = `
-            <img src="${tableRow.album.images[0].url}" alt="task image">
-            <div class="text">
-                <div class="text">
-                    <h1>${tableRow.name}</h1>
-                    <h3>${tableRow.artists[0].name}<h3>
-                </div>
-            </div>
+            <a href="${tableRow.external_urls.spotify}" target="_blank"> 
+                    <div class="card">
+                        <img src="${tableRow.album.images[0].url}" alt="song image">
+                        <div class="text">
+                            <h1>${tableRow.name}</h1>
+                            <h3>${tableRow.artists[0].name}<h3>
+                        </div>
+                    </div>
+            </a> 
             `;
         if (counter <= 5) document.getElementById("resultsLeft").appendChild(c);
         else if (counter <= 10)
@@ -130,13 +122,3 @@ document.getElementById("askYodaBtn").onclick = async () => {
         else return;
     });
 };
-
-document.getElementById("yodaIcon").style.transform = "translateY(-20px)";
-
-document.getElementById("askYodaBtn").addEventListener(
-    "mouseover",
-    () =>
-        // document.getElementById("yodaIcon")
-        (document.getElementById("yodaIcon").style.transform =
-            "translateY(-20px)")
-);

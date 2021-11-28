@@ -15,8 +15,7 @@ Keep in mind that although you can access the hosted page, you still need to dow
 ### How To Use
 Either if you access the webpage through GitHub Pages or through your downloaded local index.html file, you should see the following UI:  
 
-![desktop](https://user-images.githubusercontent.com/90244904/143762825-07932642-3bab-44b6-832e-e1605e560a71.png)
-
+![mackbook](https://user-images.githubusercontent.com/90244904/143763529-55548eea-feaf-4dc5-9d28-c432b156d91f.png)
 
 Then, the process is pretty intuitive. You type the name of a song, each one in its own input box, and then you press the button Ask Yoda to see song recommendations based on those two songs. For further precision, when you're typing the name of a song, autocomplete suggestions will pop up with song and artist names that match what you're writing.
 

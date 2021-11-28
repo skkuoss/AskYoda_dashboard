@@ -2,14 +2,126 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <title>Ask Yoda</title>
+    <link rel="icon" href="./images/yodaIcon.png" />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="first-page.css">
+    <link rel="stylesheet" href="results.css">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poller+One&display=swap" rel="stylesheet" />
+
+    <!-- Java Script -->
+    <script type="text/javascript" src="app.js" async></script>
 </head>
 
 <body>
-  <p>Ask Yoda Dashboard</p>
+    <header id="header">
+        <!-- class="header" -->
+        <!-- class="darkHeader"> -->
+        <h1>Ask Yoda</h1>
+        <h2>What music should I listen to?</h2>
+    </header>
+
+    <main id="main">
+        <div class="innerContainer" id="inputsBox">
+            <div class="lukeContainer" id="lukeContainer">
+                <img class="lukeSkywalker" id="lukeSkywalker" src="./images/luke.png" alt="Luke Skywalker" />
+                <div class="speech" id="speech">
+                    <div class="bubble" id="lukeBubble">
+                        I like these two songs:
+                    </div>
+                    <div class="inputs" id="inputs">
+                        <input type="text" class="inputLine" id="song1" placeholder="First song" list="songList1" />
+                        <datalist id="songList1">
+                        </datalist>
+                        <input type="text" class="inputLine" id="song2" placeholder="Second song" list="songList2" />
+                        <datalist id="songList2">
+                        </datalist>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="innerContainer" id="buttonsBox">
+            <img id="yodaIcon" src="./images/yodaIcon.png" alt="Icon of Yoda">
+            <button id="askYodaBtn">Ask Yoda</button>
+        </div>
+    </main>
+
+    <div class="container" id="resultsContainer">
+        <div class="column" id="resultsLeft">
+
+            <!-- <div>
+                <a href="${tableRow.external_urls.spotify}" target="_blank"> 
+                    <div class="card">
+                        <img src="./images/yodaIcon.png" alt="">
+                        <div class="text">
+                            <h1>Song name</h1>
+                            <h3>artist</h3>
+                        </div>
+                    </div>
+                </a> 
+            </div>
+            
+            <a href="${tableRow.external_urls.spotify}" target="_blank"> 
+                <div class="card">
+
+                    <img src="./images/yodaIcon.png" alt="">
+                    <div class="text">
+                        <h1>Song name</h1>
+                        <h3>artist</h3>
+                    </div>
+                </div>
+            </a> -->
+    
+        </div>
+
+        <div class="column" id="resultsRight">
+            <!-- <div>
+                <a href="${tableRow.external_urls.spotify}" target="_blank"> 
+                    <div class="card">
+                        <img src="./images/yodaIcon.png" alt="">
+                        <div class="text">
+                            <h1>Song name</h1>
+                            <h3>artist</h3>
+                        </div>
+                    </div>
+                </a> 
+            </div>
+            
+            <a href="${tableRow.external_urls.spotify}" target="_blank"> 
+                <div class="card">
+
+                    <img src="./images/yodaIcon.png" alt="">
+                    <div class="text">
+                        <h1>Song name</h1>
+                        <h3>artist</h3>
+                    </div>
+                </div>
+            </a> -->
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div>
+            <p>
+                This project was done at Sungkyunkwan University for the
+                Open Source Software Practice class in the Fall semester of
+                2021. Visit the repository of this project
+                <a href="https://github.com/skkuoss">here<img src="./images/github-logo.png" alt="github-logo" /></a>
+            </p>
+        </div>
+    </footer>
 </body>
 
 </html>

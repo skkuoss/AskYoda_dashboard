@@ -1,22 +1,10 @@
-// initial stage
-// document.getElementById("resultsContainer").style.display = "none";
-document.getElementById("footer").style.display = "none";
-
+// global variables
 let song1, song2, data;
 
-const loadMusic = async () => {
-    song1 = document.getElementById("song1").value;
-    song2 = document.getElementById("song2").value;
-    if (song1 === "" || song2 === "") return;
+// initial stage of the page
+document.getElementById("footer").style.display = "none";
 
-    let response = await fetch(
-        `http://localhost:3100/v1/recommendations?songs=${song1}&songs=${song2}`
-    );
-    data = await response.json();
-};
-
-// document.getElementById("askYodaBtn").addEventListener("mouseover", loadMusic);
-
+// song recommendation system for first input box
 document.getElementById("song1").addEventListener("keyup", async (e) => {
     // If the key is not defined, don't show any autocomplete
     if (!e.key) {
@@ -38,6 +26,8 @@ document.getElementById("song1").addEventListener("keyup", async (e) => {
         songList1.appendChild(songOption);
     }
 });
+
+// song recommendation system for second input box
 document.getElementById("song2").addEventListener("keyup", async (e) => {
     // If the key is not defined, don't show any autocomplete
     if (!e.key) {
@@ -60,12 +50,14 @@ document.getElementById("song2").addEventListener("keyup", async (e) => {
     }
 });
 
+// clear the output
 function removeAllChildNodes(parent) {
     while (parent.firstChild) {
         parent.removeChild(parent.firstChild);
     }
 }
 
+// run the main algoritm
 document.getElementById("askYodaBtn").onclick = async () => {
     removeAllChildNodes(resultsLeft);
     removeAllChildNodes(resultsRight);
@@ -94,12 +86,9 @@ document.getElementById("askYodaBtn").onclick = async () => {
     document.getElementById("lukeBubble").style.fontWeight = "normal";
     document.getElementById("footer").style.display = "block";
 
-    //
-    console.log(data.tracks[0]);
-
-
+    // printing it in two rows
     let counter = 0;
-    data.tracks.forEach((tableRow) => {
+    data.tracks.forEach((tableRow) => { 
         counter++;
 
         // let c

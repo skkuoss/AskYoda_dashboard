@@ -13,7 +13,7 @@ document.getElementById("song1").addEventListener("keyup", async (e) => {
     let song = document.getElementById("song1");
     let songList1 = document.getElementById("songList1");
     let response = await fetch(
-        `http://localhost:3100/v1/autocomplete?trackName=${song.value}`
+        `https://oss.scg.skku.ac.kr/v1/autocomplete?trackName=${song.value}`
     );
     data = await response.json();
     songList1.innerHTML = "";
@@ -36,7 +36,7 @@ document.getElementById("song2").addEventListener("keyup", async (e) => {
     let song = document.getElementById("song2");
     let songList2 = document.getElementById("songList2");
     let response = await fetch(
-        `http://localhost:3100/v1/autocomplete?trackName=${song.value}`
+        `https://oss.scg.skku.ac.kr/v1/autocomplete?trackName=${song.value}`
     );
     data = await response.json();
     songList2.innerHTML = "";
@@ -75,7 +75,7 @@ document.getElementById("askYodaBtn").onclick = async () => {
     }
 
     let response = await fetch(
-        `http://localhost:3100/v1/recommendations?songs=${song1}&songs=${song2}`
+        `https://oss.scg.skku.ac.kr/v1/recommendations?songs=${song1}&songs=${song2}`
     );
     data = await response.json();
 
@@ -88,7 +88,7 @@ document.getElementById("askYodaBtn").onclick = async () => {
 
     // printing it in two rows
     let counter = 0;
-    data.tracks.forEach((tableRow) => { 
+    data.tracks.forEach((tableRow) => {
         counter++;
 
         // let c

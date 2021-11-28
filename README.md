@@ -10,8 +10,6 @@ To download, visualize and edit the front-end website, you can simply clone the 
 
 If you don't want to download the front-end into your local machine, the website is also being hosted via GitHub Pages, and you can access it through the following link: <a href="https://skkuoss.github.io/AskYoda_dashboard/">GitHub Pages hosted webpage</a>.
 
-Keep in mind that although you can access the hosted page, you still need to download and run the back-end repo for the page to be functional. Once again, the link for that repository, where you can also find its installation and use guides, is the following: <a href="https://github.com/skkuoss/AskYoda">Ask Yoda Back-End</a>.
-
 ### How To Use
 Either if you access the webpage through GitHub Pages or through your downloaded local index.html file, you should see the following UI:  
 

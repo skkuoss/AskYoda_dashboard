@@ -63,11 +63,14 @@ main {
     }
 }
 
-@media screen and (max-width: 768px) {
-
+@media screen and (max-width: 800px) {
+    #resultsContainer {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 500px) {
     main {
         flex-direction: column;
     }
@@ -76,11 +79,18 @@ main {
         justify-content: center;
         height: 80%;
     }
+    
+
+    #buttonsBox {
+        height: 50vh;
+        /* margin-top */
+    }
 
     #lukeSkywalker {
         width: auto;
         height: auto;
         max-height: 100%;
+        z-index: 1;
     }
 
     #speech {
@@ -99,9 +109,30 @@ main {
         left: -50px;
     }
 
-    #inputsBox, #buttonsBox {
-        width: 100%;
+    #inputs {
+        position: absolute;
+        left: 0;
+        top: 350px;
     }
+
+    #inputsBox, #buttonsBox {
+        width: 90%;
+        margin: auto;
+    }
+
+    #buttonsBox {
+        /* position: absolute; */
+        margin-top: 70px;
+    }
+
+    #resultsContainer {
+        /* width: 10px; */
+        margin: auto;
+    }
+
+    /* .card { */
+        /* width: 50px; */
+    /* } */
 }
 
 /* ////// LUKE WITH BUBBLE ////// */
